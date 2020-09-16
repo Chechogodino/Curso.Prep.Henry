@@ -20,10 +20,10 @@ function saludo(idioma) {
         return "Guten Tag!";
         break;
       case "mandarin":
-        return "Ni Hao";
+        return "Ni Hao!";
         break;
       case "ingles":
-        return "hello!";
+        return "Hello!";
         break;
     }
   return "Hola!";
@@ -81,12 +81,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for(a=2;a<numero;a++)
-    if(numero%a ===0 )
-      return false;
+  var primo = 0;
+  for(a=1;a<=numero;a++)
+    if(numero%a ===0 && numero>1)
+          primo++;
+    if(primo>2 ||numero<2)
+        return false;
     return true;
   }
-
 
 
 // No modificar nada debajo de esta línea
